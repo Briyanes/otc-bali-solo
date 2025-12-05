@@ -126,7 +126,10 @@
     .faq details{background:rgba(31,41,55,.4);border:2px solid rgba(255,255,255,.1);border-radius:12px;padding:16px;transition:all .3s cubic-bezier(0.4, 0, 0.2, 1);cursor:pointer}
     .faq details:hover{border-color:var(--primary);background:rgba(79,140,255,.15);box-shadow:0 6px 16px rgba(79,140,255,.25);transform:translateY(-1px)}
     .faq details[open]{border-color:var(--accent);background:rgba(34,211,238,.1);box-shadow:0 6px 16px rgba(34,211,238,.25)}
-    .faq summary{cursor:pointer;font-weight:700;outline:none;font-size:1.05rem;color:#fff}
+    .faq summary{cursor:pointer;font-weight:700;outline:none;font-size:1.05rem;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:'▼';font-size:0.8rem;transition:transform 0.3s ease;color:var(--primary)}
+    .faq details[open] summary::after{transform:rotate(180deg)}
     .faq details p{color:#cfe0ff;font-weight:500}
     form.lead{display:grid;gap:10px}
     label{font-size:.95rem;color:#1a202c;font-weight:600}
@@ -476,15 +479,15 @@
       <div class="container">
         <h3>FAQ — Pertanyaan yang Sering Diajukan</h3>
         <div class="grid faq cols-2">
-          <details><summary>Apakah OTC Bali Solo berizin?</summary><p>Ya, kami <strong>berizin</strong> dan bekerja sama dengan mitra resmi untuk penyaluran luar negeri & kapal pesiar.</p></details>
+          <details><summary>Apakah OTC Bali Solo berizin?</summary><p>Ya, kami <b>berizin</b> dan bekerja sama dengan mitra resmi untuk penyaluran luar negeri & kapal pesiar.</p></details>
           <details><summary>Minimal pendidikan & usia?</summary><p>Minimal lulusan SMA/SMK/sederajat. Usia mengikuti ketentuan program & mitra penempatan.</p></details>
           <details><summary>Berapa lama pelatihan?</summary><p>Rata-rata 4–5 bulan intensif sebelum penempatan magang (estimasi, tergantung program).</p></details>
-          <details><summary>Perlu bisa bahasa Inggris/Mandarin?</summary><p>Kami sediakan <strong>kursus Inggris & Mandarin gratis</strong> selama pelatihan.</p></details>
+          <details><summary>Perlu bisa bahasa Inggris/Mandarin?</summary><p>Kami sediakan <b>kursus Inggris & Mandarin gratis</b> selama pelatihan.</p></details>
           <details><summary>Penempatan di negara mana saja?</summary><p>Asia & Eropa sesuai ketersediaan kuota mitra. Kapal pesiar global melalui jalur lanjutan.</p></details>
           <details><summary>Berapa kisaran gaji?</summary><p>Asia ±Rp5–10 jt/bln, Eropa ±Rp9–15 jt/bln, Cruise ±Rp10–45 jt/bln, J-1 USA ±Rp40–80 jt/bln — <em>semua estimasi</em>.</p></details>
           <details><summary>Akomodasi & makan bagaimana?</summary><p>Duty meals & asrama umumnya disediakan (sesuai ketentuan mitra & penempatan).</p></details>
-          <details><summary>Bisa cicilan?</summary><p>Bisa, <strong>angsuran hingga 3x</strong> + opsi beasiswa prestasi dan dana talang (S&amp;K berlaku).</p></details>
-          <details><summary>Apa itu Program Intensive Class?</summary><p>Program <strong>fast track 2 bulan</strong> khusus untuk yang sudah punya pengalaman hospitality. Target penempatan kapal pesiar ke Eropa, Brunei, Dubai, Qatar. Biaya <strong>Rp7.500.000</strong> (promo dari Rp10.000.000), free asrama, tapi tidak dapat sertifikat OTC.</p></details>
+          <details><summary>Bisa cicilan?</summary><p>Bisa, <b>angsuran hingga 3x</b> + opsi beasiswa prestasi dan dana talang (S&amp;K berlaku).</p></details>
+          <details><summary>Apa itu Program Intensive Class?</summary><p>Program <b>fast track 2 bulan</b> khusus untuk yang sudah punya pengalaman hospitality. Target penempatan kapal pesiar ke Eropa, Brunei, Dubai, Qatar. Biaya <b>Rp7.500.000</b> (promo dari Rp10.000.000), free asrama, tapi tidak dapat sertifikat OTC.</p></details>
           <details><summary>Apakah ada aplikasi belajar?</summary><p>Ada. Pembelajaran berbasis aplikasi; absensi & pembayaran digital.</p></details>
           <details><summary>Dokumen pendaftaran apa saja?</summary><p>Isi formulir; fotokopi ijazah terakhir; fotokopi KK, KTP & Akta Lahir; pas foto 4×6 (2 lembar).</p></details>
         </div>
@@ -584,6 +587,20 @@
     ['ctaHead','ctaHeroWA','ctaHeroCurriculum','ctaDaftar','ctaFloatWA'].forEach(id=>{
       const el=document.getElementById(id);
       if(el) el.addEventListener('click', ()=>track('click_cta',{id}));
+    });
+
+    // FAQ Accordion - auto close other FAQs when one is opened
+    const faqDetails = document.querySelectorAll('.faq details');
+    faqDetails.forEach(detail => {
+      detail.addEventListener('toggle', function() {
+        if (this.open) {
+          faqDetails.forEach(otherDetail => {
+            if (otherDetail !== this && otherDetail.open) {
+              otherDetail.open = false;
+            }
+          });
+        }
+      });
     });
   </script>
 </body>
