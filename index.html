@@ -55,7 +55,9 @@
     .card .btn.ghost{color:#1a202c;border-color:#1a202c}
     .card .btn.ghost:hover{background:rgba(0,0,0,.05);border-color:var(--primary);color:var(--primary)}
     .btn:focus{outline:3px solid rgba(79,140,255,.5);outline-offset:2px}
-    .chip{display:inline-flex;align-items:center;gap:.45rem;background:#ffffff;border:2px solid var(--primary);border-radius:999px;color:var(--primary);padding:.5rem 1rem;font-size:.9rem;font-weight:700;box-shadow:0 4px 12px rgba(79,140,255,.15)}
+    .chip{display:inline-flex;align-items:center;justify-content:center;gap:.3rem;background:#ffffff;border:2px solid var(--primary);border-radius:999px;color:var(--primary);padding:.45rem .75rem;font-size:.75rem;font-weight:700;box-shadow:0 4px 12px rgba(79,140,255,.15);text-align:center;line-height:1.2}
+    @media(min-width:640px){.chip{padding:.5rem .9rem;font-size:.85rem;gap:.4rem}}
+    @media(min-width:960px){.chip{padding:.5rem 1rem;font-size:.9rem;gap:.45rem}}
     header{
       position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(10px);background:rgba(11,16,32,.85);border-bottom:2px solid var(--stroke);box-shadow:0 2px 8px rgba(0,0,0,.3)
     }
@@ -120,8 +122,10 @@
     .price ul{color:#1f2937}
     .price ul li{font-weight:600}
     .notice{font-size:.85rem;color:#4b5563;font-weight:600;font-style:italic}
-    .promo{display:flex;gap:10px;flex-wrap:wrap}
-    .promo .chip{border-color:var(--primary);background:#e7f0ff;color:#0d6efd;font-weight:700}
+    .promo{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+    .promo .chip{border-color:var(--primary);background:#e7f0ff;color:#0d6efd;font-weight:700;font-size:.7rem;padding:.4rem .65rem}
+    @media(min-width:640px){.promo{gap:10px}.promo .chip{font-size:.8rem;padding:.45rem .8rem}}
+    @media(min-width:960px){.promo .chip{font-size:.85rem;padding:.5rem .9rem}}
     .gallery{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}
     @media(min-width:960px){.gallery{grid-template-columns:repeat(4,1fr)}}
     .gallery.portrait{grid-template-columns:repeat(2,1fr)}
