@@ -6,6 +6,11 @@
   <title>OTC Bali Solo — Overseas Training College (Berizin) | The Outstanding Tourism College</title>
   <meta name="description" content="OTC Bali Solo — Kampus pariwisata berfokus karier luar negeri. Pelatihan profesional 70% praktik, jaminan penempatan magang Asia/Eropa* (estimasi & S&K berlaku), fasilitas standar hotel bintang 5. Daftar & konsultasi via WhatsApp.">
   <link rel="icon" href="http://otcbalisolo.com/wp-content/uploads/2025/09/main-logo.webp">
+  <!-- Preconnect untuk speed optimization -->
+  <link rel="preconnect" href="http://otcbalisolo.com">
+  <link rel="dns-prefetch" href="http://otcbalisolo.com">
+  <link rel="preconnect" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://www.google.com">
   <meta property="og:type" content="website">
   <meta property="og:title" content="OTC Bali Solo">
   <meta property="og:description" content="The Outstanding Tourism College. Pelatihan profesional + penempatan magang Asia/Eropa*. Fasilitas hotel bintang 5. Konsultasi via WhatsApp.">
@@ -101,8 +106,9 @@
     .tile small{color:#374151;font-weight:500}
     .tile p{color:#1f2937;font-weight:500}
     .tile ul{color:#1f2937}
-    .media{width:100%;height:220px;border-radius:12px;border:2px solid var(--stroke);object-fit:cover;background:#f8f9fa}
-    .media-portrait{width:100%;height:360px;border-radius:12px;border:2px solid var(--stroke);object-fit:cover;background:#f8f9fa}
+    .media{width:100%;height:220px;border-radius:12px;border:2px solid var(--stroke);object-fit:cover;background:#f8f9fa;aspect-ratio:16/9}
+    .media-portrait{width:100%;height:360px;border-radius:12px;border:2px solid var(--stroke);object-fit:cover;background:#f8f9fa;aspect-ratio:9/16}
+    .avatar{width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid var(--stroke);background:#f8f9fa;aspect-ratio:1/1}
     .price{display:grid;gap:18px;padding:2.5rem;border-radius:var(--radius);border:3px solid var(--primary);background:linear-gradient(180deg,#ffffff,#f0f7ff);box-shadow:0 16px 48px rgba(79,140,255,.5);color:#1f2937}
     .price h4{color:#1a202c;font-weight:800}
     .price p{color:#1f2937}
@@ -119,7 +125,6 @@
     .testi-grid{display:grid;gap:14px}
     @media(min-width:960px){.testi-grid{grid-template-columns:repeat(3,1fr)}}
     .testi-card{padding:16px}
-    .avatar{width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid var(--stroke);background:#f8f9fa}
     .who{display:flex;align-items:center;gap:12px;margin:.5rem 0 0}
     .who b{display:block;color:#1a202c;font-weight:700}
     .who small{display:block;color:#374151;font-weight:500}
@@ -205,7 +210,7 @@
           </div>
         </div>
         <div class="card" style="padding:16px">
-          <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/image-1.webp" alt="Tampilan kampus dan fasilitas OTC Bali Solo" loading="lazy"><!-- TODO: ganti URL gambar hero -->
+          <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/image-1.webp" alt="Tampilan kampus dan fasilitas OTC Bali Solo" width="800" height="450" loading="eager" decoding="async"><!-- Gambar hero priority -->
           <div class="grid cols-2" style="margin-top:10px">
             <div class="tile"><h4>Legal & Kepercayaan</h4><small>Overseas Training College <strong>berizin</strong>. Didukung track record penempatan LN & cruise.</small></div>
             <div class="tile"><h4>Fokus Karier</h4><small>70% praktik berstandar internasional + coaching karier hingga penempatan.</small></div>
@@ -306,10 +311,10 @@
             </div>
           </div>
           <div class="grid cols-2">
-            <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/image-2.webp" alt="Lab Kitchen standar hotel bintang 5" loading="lazy">
-            <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/image-3.webp" alt="Lab Restaurant untuk praktik pelayanan" loading="lazy">
-            <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/image-4.webp" alt="Lab Housekeeping untuk praktik kebersihan kamar" loading="lazy">
-            <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/image-5.webp" alt="Lab Bar dan coffee machine" loading="lazy">
+            <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/image-2.webp" alt="Lab Kitchen standar hotel bintang 5" width="800" height="450" loading="lazy" decoding="async">
+            <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/image-3.webp" alt="Lab Restaurant untuk praktik pelayanan" width="800" height="450" loading="lazy" decoding="async">
+            <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/image-4.webp" alt="Lab Housekeeping untuk praktik kebersihan kamar" width="800" height="450" loading="lazy" decoding="async">
+            <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/image-5.webp" alt="Lab Bar dan coffee machine" width="800" height="450" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -466,7 +471,7 @@
             <a class="btn secondary" href="#faq">Cek Syarat</a>
           </div>
           <div style="margin-top:12px">
-            <iframe class="map" title="Peta Kampus OTC Bali Solo" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            <iframe class="map" title="Peta Kampus OTC Bali Solo" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%" height="300"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.1648606362523!2d110.81311529999999!3d-7.556996299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a1700023c3ff1%3A0xb14b87c4448bdf1a!2sOTC%20Bali%20SOLO!5e0!3m2!1sen!2sid!4v1758610639696!5m2!1sen!2sid"></iframe>
           </div>
           <p class="help" style="margin-top:10px">Jam layanan admin (estimasi): Sen–Sab 09.00–17.00 WIB — hubungi WhatsApp untuk konfirmasi.</p>
@@ -484,7 +489,7 @@
           <details><summary>Berapa lama pelatihan?</summary><p>Rata-rata 4–5 bulan intensif sebelum penempatan magang (estimasi, tergantung program).</p></details>
           <details><summary>Perlu bisa bahasa Inggris/Mandarin?</summary><p>Kami sediakan <b>kursus Inggris & Mandarin gratis</b> selama pelatihan.</p></details>
           <details><summary>Penempatan di negara mana saja?</summary><p>Asia & Eropa sesuai ketersediaan kuota mitra. Kapal pesiar global melalui jalur lanjutan.</p></details>
-          <details><summary>Berapa kisaran gaji?</summary><p>Asia ±Rp5–10 jt/bln, Eropa ±Rp9–15 jt/bln, Cruise ±Rp10–45 jt/bln, J-1 USA ±Rp40–80 jt/bln — <em>semua estimasi</em>.</p></details>
+          <details><summary>Berapa kisaran gaji?</summary><p>Asia ±Rp5–10 jt/bln, Eropa ±Rp9–15 jt/bln, Cruise ±Rp10–45 jt/bln, J-1 USA ±Rp40–80 jt/bln — <b>semua estimasi</b>.</p></details>
           <details><summary>Akomodasi & makan bagaimana?</summary><p>Duty meals & asrama umumnya disediakan (sesuai ketentuan mitra & penempatan).</p></details>
           <details><summary>Bisa cicilan?</summary><p>Bisa, <b>angsuran hingga 3x</b> + opsi beasiswa prestasi dan dana talang (S&amp;K berlaku).</p></details>
           <details><summary>Apa itu Program Intensive Class?</summary><p>Program <b>fast track 2 bulan</b> khusus untuk yang sudah punya pengalaman hospitality. Target penempatan kapal pesiar ke Eropa, Brunei, Dubai, Qatar. Biaya <b>Rp7.500.000</b> (promo dari Rp10.000.000), free asrama, tapi tidak dapat sertifikat OTC.</p></details>
