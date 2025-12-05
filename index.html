@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OTC Bali Solo — Overseas Training College (Berizin) | The Outstanding Tourism College</title>
+  <meta name="description" content="OTC Bali Solo — Kampus pariwisata berfokus karier luar negeri. Pelatihan profesional 70% praktik, jaminan penempatan magang Asia/Eropa* (estimasi & S&K berlaku), fasilitas standar hotel bintang 5. Daftar & konsultasi via WhatsApp.">
+  <link rel="icon" href="http://otcbalisolo.com/wp-content/uploads/2025/09/main-logo.webp">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="OTC Bali Solo">
+  <meta property="og:description" content="The Outstanding Tourism College. Pelatihan profesional + penempatan magang Asia/Eropa*. Fasilitas hotel bintang 5. Konsultasi via WhatsApp.">
+  <meta property="og:image" content="http://otcbalisolo.com/wp-content/uploads/2025/09/main-logo.webp">
+  <meta property="og:url" content="https://www.otcbalisolo.com">
+  <style>
+    :root{
+      --bg:#0b1020; --surface:#0f162f; --muted:#a8b3cf; --text:#eaf0ff;
+      --primary:#4f8cff; --accent:#22d3ee; --ok:#22c55e; --warn:#f59e0b; --danger:#ef4444;
+      --card:#ffffff; --stroke:#dee2e6; --shadow:0 10px 30px rgba(0,0,0,.25);
+      --radius:16px; --radius-sm:12px; --radius-xs:10px; --maxw:1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,'Helvetica Neue',Arial,sans-serif;
+      background:linear-gradient(180deg,#0b1020 0%,#0c1326 100%);
+      color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:var(--primary);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .card a{color:#0d6efd;font-weight:600}
+    .card a:hover{color:#0a58ca;text-decoration:underline}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+    .btn{
+      display:inline-flex;align-items:center;gap:.6rem;background:linear-gradient(135deg,var(--primary),#7aa8ff);
+      color:#fff;border:0;border-radius:999px;padding:.85rem 1.5rem;font-weight:700;font-size:1.05rem;box-shadow:0 8px 25px rgba(79,140,255,.35);cursor:pointer;text-decoration:none;transition:all .3s ease;position:relative;overflow:hidden
+    }
+    .btn:hover{transform:translateY(-2px);box-shadow:0 12px 35px rgba(79,140,255,.5)}
+    .btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);transition:left .5s}
+    .btn:hover::before{left:100%}
+    @keyframes pulse{0%,100%{box-shadow:0 8px 25px rgba(79,140,255,.35)}50%{box-shadow:0 8px 35px rgba(79,140,255,.6)}}
+    .btn#ctaHead,.btn#ctaFloatWA,.btn#ctaDaftar{animation:pulse 2s infinite}
+    .btn.secondary{background:transparent;border:2px solid rgba(255,255,255,.3);color:#fff}
+    .btn.secondary:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.5)}
+    .card .btn.secondary{color:#1a202c;border-color:#1a202c}
+    .card .btn.secondary:hover{background:rgba(0,0,0,.05);border-color:var(--primary);color:var(--primary)}
+    .btn.ghost{background:transparent;border:2px dashed var(--stroke);color:var(--muted)}
+    .btn.ghost:hover{background:rgba(255,255,255,.05);border-color:var(--primary);color:var(--primary)}
+    .card .btn.ghost{color:#1a202c;border-color:#1a202c}
+    .card .btn.ghost:hover{background:rgba(0,0,0,.05);border-color:var(--primary);color:var(--primary)}
+    .btn:focus{outline:3px solid rgba(79,140,255,.5);outline-offset:2px}
+    .chip{display:inline-flex;align-items:center;gap:.45rem;background:#ffffff;border:2px solid var(--primary);border-radius:999px;color:var(--primary);padding:.5rem 1rem;font-size:.9rem;font-weight:700;box-shadow:0 4px 12px rgba(79,140,255,.15)}
+    header{
+      position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(10px);background:rgba(11,16,32,.85);border-bottom:2px solid var(--stroke);box-shadow:0 2px 8px rgba(0,0,0,.3)
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:.75rem 16px}
+    .brand{display:flex;align-items:center;gap:.75rem}
+    .brand img{width:40px;height:40px;border-radius:10px;object-fit:cover;border:2px solid var(--primary);background:#0d132b}
+    .brand h1{font-size:1rem;margin:0;line-height:1.1;color:#fff}
+    nav ul{display:none;list-style:none;margin:0;padding:0;gap:.75rem}
+    @media(min-width:960px){nav ul{display:flex}}
+    nav a{display:inline-block;padding:.55rem .8rem;border-radius:10px;color:#d8e5ff}
+    nav a:hover{background:#1a2441;color:var(--primary)}
+    .hero{
+      padding:48px 0 28px;
+      background:
+        radial-gradient(1200px 400px at 50% -200px, rgba(79,140,255,.25), transparent 60%),
+        radial-gradient(600px 300px at 10% 20%, rgba(34,211,238,.15), transparent 60%);
+    }
+    .hero-grid{display:grid;gap:20px}
+    @media(min-width:960px){.hero-grid{grid-template-columns:1.25fr 1fr;align-items:center}}
+    .hero h2{font-size:2.2rem;margin:.25rem 0 .5rem;font-weight:800;line-height:1.2;color:#fff}
+    @media(min-width:960px){.hero h2{font-size:3rem}}
+    .sub{color:#cdd9ff;max-width:66ch;font-size:1.15rem;font-weight:500}
+    @media(min-width:960px){.sub{font-size:1.3rem}}
+    .badge-row{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+    .card{background:#ffffff;border:2px solid #e5e7eb;border-radius:var(--radius);box-shadow:0 8px 24px rgba(0,0,0,.4);color:#1f2937}
+    .card h3{color:#4f8cff !important;font-weight:800}
+    .card h4{color:#1a202c}
+    .card p{color:#1f2937;font-weight:500}
+    .card ul{color:#1f2937}
+    .stack{display:grid;gap:12px}
+    .grid{display:grid;gap:14px}
+    .grid.cols-2{grid-template-columns:1fr}
+    .grid.cols-3{grid-template-columns:1fr}
+    .grid.cols-4{grid-template-columns:1fr}
+    @media(min-width:700px){.grid.cols-2{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:960px){.grid.cols-3{grid-template-columns:repeat(3,1fr)} .grid.cols-4{grid-template-columns:repeat(4,1fr)}}
+    .section{padding:56px 0} /* padding atas & bawah lebih lega */
+    .section h3{margin:0 0 1rem;font-size:1.8rem;font-weight:700;color:#fff}
+    @media(min-width:960px){.section h3{font-size:2.2rem}}
+    .section p.lead{color:#fff;font-size:1.05rem}
+    .card p.lead{color:#1f2937;font-weight:600;font-size:1.05rem}
+    ul.check, ul.cross{list-style:none;padding:0;margin:.3rem 0}
+    ul.check li, ul.cross li{display:flex;gap:.6rem;align-items:flex-start;padding:.4rem 0;color:#1f2937;font-weight:500}
+    .tick{color:var(--ok);font-weight:900}
+    .x{color:var(--danger);font-weight:900}
+    .card ul.check li, .card ul.cross li, .tile ul.check li{color:#1f2937}
+    .tile{padding:20px;border-radius:var(--radius-sm);border:2px solid #e5e7eb;background:#ffffff;transition:all .3s cubic-bezier(0.4, 0, 0.2, 1)}
+    .tile:hover{transform:translateY(-4px) scale(1.01);border-color:var(--primary);box-shadow:0 16px 32px rgba(79,140,255,.35);background:#f8faff}
+    .tile h4{margin:.2rem 0 .3rem;font-size:1.05rem;color:#1a202c;font-weight:700}
+    .tile small{color:#374151;font-weight:500}
+    .tile p{color:#1f2937;font-weight:500}
+    .tile ul{color:#1f2937}
+    .media{width:100%;height:220px;border-radius:12px;border:2px solid var(--stroke);object-fit:cover;background:#f8f9fa}
+    .media-portrait{width:100%;height:360px;border-radius:12px;border:2px solid var(--stroke);object-fit:cover;background:#f8f9fa}
+    .price{display:grid;gap:18px;padding:2.5rem;border-radius:var(--radius);border:3px solid var(--primary);background:linear-gradient(180deg,#ffffff,#f0f7ff);box-shadow:0 16px 48px rgba(79,140,255,.5);color:#1f2937}
+    .price h4{color:#1a202c;font-weight:800}
+    .price p{color:#1f2937}
+    .price ul{color:#1f2937}
+    .price ul li{font-weight:600}
+    .notice{font-size:.85rem;color:#4b5563;font-weight:600;font-style:italic}
+    .promo{display:flex;gap:10px;flex-wrap:wrap}
+    .promo .chip{border-color:var(--primary);background:#e7f0ff;color:#0d6efd;font-weight:700}
+    .gallery{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}
+    @media(min-width:960px){.gallery{grid-template-columns:repeat(4,1fr)}}
+    .gallery.portrait{grid-template-columns:repeat(2,1fr)}
+    @media(min-width:960px){.gallery.portrait{grid-template-columns:repeat(4,1fr)}}
+    blockquote{margin:0;padding:16px;border-left:4px solid var(--primary);background:#f8f9fa;border-radius:0 12px 12px 0;color:#1a202c;font-weight:500}
+    .testi-grid{display:grid;gap:14px}
+    @media(min-width:960px){.testi-grid{grid-template-columns:repeat(3,1fr)}}
+    .testi-card{padding:16px}
+    .avatar{width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid var(--stroke);background:#f8f9fa}
+    .who{display:flex;align-items:center;gap:12px;margin:.5rem 0 0}
+    .who b{display:block;color:#1a202c;font-weight:700}
+    .who small{display:block;color:#374151;font-weight:500}
+    .faq details{background:rgba(31,41,55,.4);border:2px solid rgba(255,255,255,.1);border-radius:12px;padding:16px;transition:all .3s cubic-bezier(0.4, 0, 0.2, 1);cursor:pointer}
+    .faq details:hover{border-color:var(--primary);background:rgba(79,140,255,.15);box-shadow:0 6px 16px rgba(79,140,255,.25);transform:translateY(-1px)}
+    .faq details[open]{border-color:var(--accent);background:rgba(34,211,238,.1);box-shadow:0 6px 16px rgba(34,211,238,.25)}
+    .faq summary{cursor:pointer;font-weight:700;outline:none;font-size:1.05rem;color:#fff}
+    .faq details p{color:#cfe0ff;font-weight:500}
+    form.lead{display:grid;gap:10px}
+    label{font-size:.95rem;color:#1a202c;font-weight:600}
+    input, select{
+      width:100%;padding:.9rem;border-radius:12px;border:2px solid #e5e7eb;
+      background:#ffffff;color:#1a202c;font-weight:600;font-size:1rem
+    }
+    input::placeholder{color:#adb5bd}
+    input:focus, select:focus{outline:3px solid rgba(79,140,255,.5);outline-offset:2px;border-color:var(--primary)}
+    .help{font-size:.85rem;color:#fff;font-weight:500}
+    .card .help{color:#1a202c}
+    .card .help strong, .price .help strong{color:#1a202c}
+    .tile .help{color:#4b5563}
+    .success{display:none;margin-top:12px;padding:14px;border-radius:12px;background:#d1f5e0;border:2px solid #22c55e;color:#065f46;font-weight:600}
+    .map{width:100%;height:300px;border:2px solid var(--stroke);border-radius:12px}
+    footer{border-top:2px solid #1f2a4a;padding:24px 0;color:#cfe0ff;background:var(--bg)}
+    .footgrid{display:grid;gap:14px}
+    @media(min-width:700px){.footgrid{grid-template-columns:2fr 1fr 1fr}}
+    .floating-wa{position:fixed;right:20px;bottom:20px;z-index:60}
+    .floating-wa .btn{font-size:1.1rem;padding:1rem 1.8rem;box-shadow:0 10px 35px rgba(79,140,255,.5)}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    .floating-wa .btn{animation:float 3s ease-in-out infinite}
+    .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+    /* padding tambahan khusus galeri agar lebih rapi */
+    #galeri, #galeri-pemberangkatan{padding-top:72px;padding-bottom:72px}
+    .highlight-text{color:var(--accent);font-weight:700;font-size:1.1em}
+    .price-highlight{color:var(--accent);font-size:1.4em;font-weight:800}
+    strong{color:#fff;font-weight:700}
+    .card strong, .tile strong, .faq strong, .price strong{color:#1a202c;font-weight:700}
+    .card em, .tile em, .faq em, .price em{color:#374151;font-style:italic}
+  </style>
+</head>
+<body>
+  <a class="sr-only" href="#main">Lewati ke konten utama</a>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="http://otcbalisolo.com/wp-content/uploads/2025/09/main-logo.webp" alt="Logo OTC Bali Solo"><!-- TODO: ganti URL logo -->
+        <div><h1>OTC Bali Solo</h1></div>
+      </div>
+      <nav aria-label="Navigasi utama">
+        <ul>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#fasilitas">Fasilitas</a></li>
+          <li><a href="#jaminan">Jaminan</a></li>
+          <li><a href="#karier">Karier</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#daftar">Daftar</a></li>
+        </ul>
+      </nav>
+      <a class="btn" id="ctaHead" href="https://wa.me/6287810038905?text=Halo%20OTC%20Bali%20Solo%2C%20saya%20ingin%20konsultasi%20program." target="_blank" rel="noopener">Konsultasi via WA</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge-row">
+            <span class="chip">Berizin</span><span class="chip">Kampus Surakarta</span><span class="chip">Fasilitas Hotel ★★★★★</span>
+          </div>
+          <h2>Siap Bangun Karir Luar Negeri &amp; Financial Freedom Sejak Dini?</h2>
+          <p class="sub">Raih hal itu bersama kami!</p>
+          <div class="stack" style="margin:14px 0 18px">
+            <div class="grid cols-2">
+              <a class="btn" id="ctaHeroWA" href="https://wa.me/6287810038905?text=Halo%20OTC%20Bali%20Solo%2C%20saya%20ingin%20konsultasi%20program." target="_blank" rel="noopener">Konsultasi via WhatsApp</a>
+              <a class="btn secondary" href="#program" id="ctaHeroCurriculum">Lihat Kurikulum</a>
+            </div>
+            <p class="help">Alamat kampus: <strong>Jl. R.M. Said No 208, Mangkubumen Kec. Banjarsari Kota Surakarta Jawa Tengah 57134</strong></p>
+          </div>
+        </div>
+        <div class="card" style="padding:16px">
+          <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/image-1.webp" alt="Tampilan kampus dan fasilitas OTC Bali Solo" loading="lazy"><!-- TODO: ganti URL gambar hero -->
+          <div class="grid cols-2" style="margin-top:10px">
+            <div class="tile"><h4>Legal & Kepercayaan</h4><small>Overseas Training College <strong>berizin</strong>. Didukung track record penempatan LN & cruise.</small></div>
+            <div class="tile"><h4>Fokus Karier</h4><small>70% praktik berstandar internasional + coaching karier hingga penempatan.</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COPY INTI + PAIN POINTS -->
+    <section class="section">
+      <div class="container grid cols-2">
+        <div class="card" style="padding:16px">
+          <h3>Kenapa Banyak Gen-Z Tertahan?</h3>
+          <p class="lead">Kendala yang kerap dihadapi oleh kebanyakan Gen-Z saat ini. Apakah pernah mengalami hal ini juga?</p>
+          <ul class="cross">
+            <li><span class="x">❌</span><span>Kesulitan mencari pekerjaan, terlalu banyak persaingan.</span></li>
+            <li><span class="x">❌</span><span>Masih menjadi <em>sandwich generation</em>.</span></li>
+            <li><span class="x">❌</span><span>Kesulitan meningkatkan karier dan perekonomian diri.</span></li>
+            <li><span class="x">❌</span><span>Usia sudah 20-an tapi masih belum <em>financial freedom</em>.</span></li>
+            <li><span class="x">❌</span><span>Membutuhkan pekerjaan dengan gaji besar secepatnya.</span></li>
+          </ul>
+        </div>
+        <div class="card" style="padding:16px">
+          <h3>Kenapa Harus yang Berizin?</h3>
+          <p>Jangan asal mendaftar <em>overseas training</em> yang menjanjikan gaji & peluang karier berlebihan tanpa pelatihan profesional dan izin resmi. Program tanpa izin sering mematok harga tinggi karena Anda membayar penyalur/agen ilegal yang tidak mengutamakan keselamatan.</p>
+          <p><strong>Di OTC Bali Solo</strong>, harga realistis dengan instruktur profesional, teori & praktik langsung, serta pendampingan saat pertama kali terjun di lapangan.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- JAMINAN / VALUE -->
+    <section id="jaminan" class="section">
+      <div class="container">
+        <h3>Jaminan & Value untuk Karier Luar Negeri</h3>
+        <div class="grid cols-3">
+          <div class="tile"><h4>✅ Penempatan Magang Asia/Eropa</h4><small>Jaminan kuota penempatan Luar Negeri 100%<br>* <span class="help">(syarat & ketentuan berlaku)</span>.</small></div>
+          <div class="tile"><h4>✅ Asuransi & Dana Pensiun</h4><small>Jaminan asuransi kerja dan uang pensiunan (estimasi ratusan juta rupiah).</small></div>
+          <div class="tile"><h4>✅ Duty Meals & Asrama</h4><small>Duty meals & asrama gratis selama penempatan (sesuai ketentuan mitra).</small></div>
+          <div class="tile"><h4>✅ Potensi Income Tambahan</h4><small>Overtime ±Rp100–250 ribu/jam (estimasi) + peluang side-skills.</small></div>
+          <div class="tile"><h4>✅ Jaringan Cruise & Hotel</h4><small>Kerja sama hotel & kapal pesiar global.</small></div>
+          <div class="tile"><h4>✅ Mobile App</h4><small>Pembelajaran berbasis aplikasi, absensi & pembayaran digital.</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAM -->
+    <section id="program" class="section">
+      <div class="container">
+        <h3>Program Studi</h3>
+        <p class="lead">Kurikulum ringkas, intensif, dan berorientasi kerja. 70% praktik berstandar internasional.</p>
+        <div class="grid cols-3">
+          <div class="tile">
+            <h4>BASIC LEVEL — 1 Tahun</h4>
+            <ul class="check">
+              <li><span class="tick">✅</span><span>Culinary</span></li>
+              <li><span class="tick">✅</span><span>F&amp;B Service</span></li>
+              <li><span class="tick">✅</span><span>Housekeeping</span></li>
+            </ul>
+            <small>Outcome: siap magang di hotel bintang 4–5 Asia/Eropa.</small>
+          </div>
+          <div class="tile"><h4>MIDDLE LEVEL — 2 Tahun</h4><small>Pendalaman manajerial operasional + persiapan cruise line.</small></div>
+          <div class="tile">
+            <h4>INTENSIVE CLASS — 2 Bulan</h4>
+            <p style="margin: 0.5rem 0; font-size: 0.9rem; color: var(--accent);"><strong>Fast Track Kapal Pesiar</strong></p>
+            <small>Khusus untuk yang sudah punya pengalaman hospitality. Target penempatan Kapal pesiar dan Perhotelan Luar Negeri.</small>
+            <ul class="check" style="margin-top: 0.5rem; font-size: 0.85rem;">
+              <li><span class="tick">✅</span><span>Eropa</span></li>
+              <li><span class="tick">✅</span><span>Brunei</span></li>
+              <li><span class="tick">✅</span><span>Dubai</span></li>
+              <li><span class="tick">✅</span><span>Qatar</span></li>
+            </ul>
+            <div style="margin-top: 0.8rem; padding: 0.6rem; background: #1a2441; border-radius: 8px; border: 1px solid #2d3a5a;">
+              <p style="margin: 0; font-size: 0.85rem;"><span style="text-decoration: line-through; color: #a8b3cf;">Rp10.000.000</span> <strong style="color: #ffffff; font-size: 1.1rem;">Rp7.500.000</strong></p>
+              <small style="color: #ffffff;">✅ Free Asrama | ⚠️ Tidak dapat sertifikat OTC</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASILITAS -->
+    <section id="fasilitas" class="section">
+      <div class="container">
+        <h3>Fasilitas Kampus</h3>
+        <div class="grid cols-2">
+          <div class="stack">
+            <div class="tile">
+              <ul class="check">
+                <li><span class="tick">✅</span><span>Ruang ber-AC, Audio Visual, Free Wi-Fi</span></li>
+                <li><span class="tick">✅</span><span>Lab Restaurant, Kitchen, Housekeeping standar hotel ★★★★★</span></li>
+                <li><span class="tick">✅</span><span>Lab Bar / Coffee Machine* (sesuai materi)</span></li>
+                <li><span class="tick">✅</span><span>Asrama gratis; parkir luas</span></li>
+                <li><span class="tick">✅</span><span>Rasio kelas ≤ 20 siswa/instruktur</span></li>
+              </ul>
+            </div>
+            <div class="promo">
+              <span class="chip">Gratis Kursus Inggris</span><span class="chip">Gratis Kursus Mandarin</span><span class="chip">70% Praktik</span>
+            </div>
+          </div>
+          <div class="grid cols-2">
+            <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/image-2.webp" alt="Lab Kitchen standar hotel bintang 5" loading="lazy">
+            <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/image-3.webp" alt="Lab Restaurant untuk praktik pelayanan" loading="lazy">
+            <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/image-4.webp" alt="Lab Housekeeping untuk praktik kebersihan kamar" loading="lazy">
+            <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/image-5.webp" alt="Lab Bar dan coffee machine" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JALUR KARIER -->
+    <section id="karier" class="section">
+      <div class="container">
+        <h3>Jalur Karier (Estimasi)</h3>
+        <div class="grid cols-4">
+          <div class="tile"><h4>1) Pelatihan 4–5 bln</h4><small>Kompetensi dasar–lanjut + bahasa & budaya kerja.</small></div>
+          <div class="tile"><h4>2) Magang Asia/Eropa</h4><small>Upah Asia ±Rp5–10 jt/bln; Eropa ±Rp9–15 jt/bln <em>(estimasi)</em>.</small></div>
+          <div class="tile"><h4>3) Kapal Pesiar</h4><small>±Rp10–45 jt/bln <em>(estimasi)</em> + overtime.</small></div>
+          <div class="tile"><h4>4) Alternatif J-1 USA</h4><small>±Rp40–80 jt/bln <em>(estimasi)</em>.</small></div>
+        </div>
+        <p class="help">Kapal pesiar = “hotel mengapung” dengan ratusan hingga ribuan kru & penumpang, puluhan <em>deck</em>, dan standar layanan internasional.</p>
+      </div>
+    </section>
+
+    <!-- HARGA & PROMO -->
+    <section id="daftar" class="section">
+      <div class="container">
+        <h3 style="margin-bottom: 1rem;">Harga & Promo</h3>
+        <div class="price" style="padding: 2rem;">
+          <div class="grid cols-2">
+            <div class="stack" style="gap: 16px;">
+              <h4 style="margin-bottom: 0.5rem; color: #1a202c; font-size: 1.5rem;">HANYA DENGAN <span style="color:#0d6efd; font-weight:800;">15 JUTAAN</span></h4>
+              <ul class="check" style="margin-bottom: 1rem;">
+                <li style="padding: 0.5rem 0;"><span class="tick">✅</span><span>Pelatihan teori & praktik</span></li>
+                <li style="padding: 0.5rem 0;"><span class="tick">✅</span><span>Penempatan magang perhotelan & kapal pesiar (Asia/Eropa)</span></li>
+                <li style="padding: 0.5rem 0;"><span class="tick">✅</span><span>Asuransi kerja + duty meals + asrama gratis</span></li>
+              </ul>
+              <div class="promo" style="gap: 0.8rem; margin-bottom: 1rem;">
+                <span class="chip">Angsuran hingga 3x</span><span class="chip">Early Bird −Rp1.000.000</span><span class="chip">Potongan Daftar −Rp250.000 (50 pertama)</span><span class="chip">Beasiswa Prestasi ≤50%</span><span class="chip">Dana Talang ≤50%</span>
+              </div>
+            </div>
+            <div class="stack" style="gap: 16px;">
+              <div class="tile" style="padding: 20px;">
+                <h4 style="margin-bottom: 0.5rem;">“Kuliah Untung” — Magang Taiwan</h4>
+                <p style="margin-bottom: 0.8rem;">Uang saku minimal <strong>±Rp9.000.000/bln</strong> → proyeksi 6 bulan <strong>±Rp54.000.000</strong> untuk membantu mengembalikan biaya kuliah/magang.</p>
+                <p class="notice">*Estimasi tergantung negara/posisi/kinerja. Syarat & ketentuan berlaku.</p>
+              </div>
+              <a class="btn" id="ctaDaftar" href="https://wa.me/6287810038905?text=Halo%20OTC%20Bali%20Solo%2C%20saya%20ingin%20daftar%20program." target="_blank" rel="noopener" style="margin-top: 1rem;">Daftar Sekarang</a>
+            </div>
+          </div>
+          <p class="help" style="margin-top: 1.5rem;">Didukung oleh <strong>PT. Millennium Muda Mandiri</strong> & <strong>PT. Omna Trisatya Chandra</strong> untuk penyaluran LN/kapal pesiar. Kerja sama Pemda Surakarta; sering memperoleh program beasiswa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERI MAGANG & KEGIATAN -->
+    <section id="galeri" class="section">
+      <div class="container">
+        <h3>Galeri Magang & Kegiatan</h3>
+        <p class="lead">Cek beberapa dokumentasi praktik dan penempatan kami.</p>
+        <div class="gallery">
+          <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/galery-1.webp" alt="Mahasiswa OTC saat kegiatan kunjungan" loading="lazy"><!-- TODO: ganti URL foto -->
+          <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/galery-9.webp" alt="Briefing dan pelatihan layanan tamu" loading="lazy">
+          <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/galery-3.webp" alt="Sesi foto bersama tim praktik" loading="lazy">
+          <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/galery-4.webp" alt="Kegiatan luar ruang bersama instruktur" loading="lazy">
+          <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/galery-5.webp" alt="Kelompok mahasiswa program F&B Service" loading="lazy">
+          <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/galery-6.webp" alt="Kegiatan diskusi lapangan" loading="lazy">
+          <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/galery-7.webp" alt="Simulasi prosedur keselamatan" loading="lazy">
+          <img class="media" src="http://otcbalisolo.com/wp-content/uploads/2025/09/galery-8.webp" alt="Pembekalan kelas" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERI PEMBERANGKATAN (PORTRAIT 2→4 KOLOM) -->
+    <section id="galeri-pemberangkatan" class="section">
+      <div class="container">
+        <h3>Galeri Pemberangkatan</h3>
+        <p class="lead">Dokumentasi momen pelepasan peserta yang berangkat ke tempat magang di Asia/Eropa dan kapal pesiar. Semua foto berorientasi potret.</p>
+        <div class="gallery portrait">
+          <img class="media-portrait" src="http://otcbalisolo.com/wp-content/uploads/2025/09/pemberangkatan-1.webp" alt="Pemberangkatan 1" loading="lazy"><!-- TODO: ganti URL gambar potret -->
+          <img class="media-portrait" src="http://otcbalisolo.com/wp-content/uploads/2025/09/pemberangkatan-2.webp" alt="Pemberangkatan 2" loading="lazy"><!-- TODO: ganti URL gambar potret -->
+          <img class="media-portrait" src="http://otcbalisolo.com/wp-content/uploads/2025/09/pemberangkatan-10.webp" alt="Pemberangkatan 3" loading="lazy"><!-- TODO: ganti URL gambar potret -->
+          <img class="media-portrait" src="http://otcbalisolo.com/wp-content/uploads/2025/09/pemberangkatan-13.webp" alt="Pemberangkatan 4" loading="lazy"><!-- TODO: ganti URL gambar potret -->
+          <img class="media-portrait" src="http://otcbalisolo.com/wp-content/uploads/2025/09/pemberangkatan-19.webp" alt="Pemberangkatan 5" loading="lazy"><!-- TODO: ganti URL gambar potret -->
+          <img class="media-portrait" src="http://otcbalisolo.com/wp-content/uploads/2025/09/pemberangkatan-18.webp" alt="Pemberangkatan 6" loading="lazy"><!-- TODO: ganti URL gambar potret -->
+          <img class="media-portrait" src="http://otcbalisolo.com/wp-content/uploads/2025/09/pemberangkatan-17.webp" alt="Pemberangkatan 7" loading="lazy"><!-- TODO: ganti URL gambar potret -->
+          <img class="media-portrait" src="http://otcbalisolo.com/wp-content/uploads/2025/09/pemberangkatan-16.webp" alt="Pemberangkatan 8" loading="lazy"><!-- TODO: ganti URL gambar potret -->
+          <img class="media-portrait" src="http://otcbalisolo.com/wp-content/uploads/2025/09/pemberangkatan-15.webp" alt="Pemberangkatan 9" loading="lazy"><!-- TODO: ganti URL gambar potret -->
+          <img class="media-portrait" src="http://otcbalisolo.com/wp-content/uploads/2025/09/pemberangkatan-3.webp" alt="Pemberangkatan 10" loading="lazy"><!-- TODO: ganti URL gambar potret -->
+          <img class="media-portrait" src="http://otcbalisolo.com/wp-content/uploads/2025/09/pemberangkatan-11.webp" alt="Pemberangkatan 11" loading="lazy"><!-- TODO: ganti URL gambar potret -->
+          <img class="media-portrait" src="http://otcbalisolo.com/wp-content/uploads/2025/09/pemberangkatan-12.webp" alt="Pemberangkatan 12" loading="lazy"><!-- TODO: ganti URL gambar potret -->
+          <img class="media-portrait" src="http://otcbalisolo.com/wp-content/uploads/2025/09/pemberangkatan-9.webp" alt="Pemberangkatan 13" loading="lazy"><!-- TODO: ganti URL gambar potret -->
+          <img class="media-portrait" src="http://otcbalisolo.com/wp-content/uploads/2025/09/pemberangkatan-6.webp" alt="Pemberangkatan 14" loading="lazy"><!-- TODO: ganti URL gambar potret -->
+          <img class="media-portrait" src="http://otcbalisolo.com/wp-content/uploads/2025/09/pemberangkatan-7.webp" alt="Pemberangkatan 15" loading="lazy"><!-- TODO: ganti URL gambar potret -->
+          <img class="media-portrait" src="http://otcbalisolo.com/wp-content/uploads/2025/09/pemberangkatan-4.webp" alt="Pemberangkatan 16" loading="lazy"><!-- TODO: ganti URL gambar potret -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONI (DIPERBARUI + FOTO) -->
+    <section class="section">
+      <div class="container">
+        <h3>Testimoni & Alumni</h3>
+        <div class="testi-grid">
+          <div class="card testi-card">
+            <img class="avatar" src="http://otcbalisolo.com/wp-content/uploads/2025/09/testimony-1.webp" alt="Foto Dandi Puji"><!-- TODO: ganti foto alumni -->
+            <div class="who"><div><b>Dandi Puji</b><small>MSC World Europe Cruises</small></div></div>
+            <blockquote>“It's a pleasure to be a part the OTC Bali Solo family, with good management and a complete staff who are very helpful. I am also very grateful to OTC Bali Solo for giving me a lot of knowledge about hospitality industry. motivation, support so that I can achieve my own dream. Please remember "We Will Never Be This Young Again" so let's join OTC Bali Solo to reach your dream of a career in the hotel industry and you can explore the beautiful world in any ways.”<br><br>So what are you waiting for??</blockquote>
+          </div>
+          <div class="card testi-card">
+            <img class="avatar" src="http://otcbalisolo.com/wp-content/uploads/2025/09/testimony-2.webp" alt="Foto Ade Firmansyah"><!-- TODO: ganti foto alumni -->
+            <div class="who"><div><b>Ade Firmansyah</b><small>Evergreen Laurel Hotel, Taipei</small></div></div>
+            <blockquote>“It all starts with never being afraid to try! Since I studied in OTC Bali Solo, I saw lots of opportunities to work abroad, and in the end I am able to work abroad and achieve all my dreams, apart from earning a lot of money, I could also develop my skills. I can improve my English language skills, increased self-confidence, and of course I have gained a lof of experience regarding a diciplined lifestyle abroad.<br><br>Thank you OTC Bali Solo!.”</blockquote>
+          </div>
+          <div class="card testi-card">
+            <img class="avatar" src="http://otcbalisolo.com/wp-content/uploads/2025/09/testimony-3.webp" alt="Foto Novi Ardianto"><!-- TODO: ganti foto alumni -->
+            <div class="who"><div><b>Novi Ardianto</b><small>Cunard Cruise Line</small></div></div>
+            <blockquote>“Pertama saya ingin mengucapkan terima kasih kepada OTC Bali Solo. Sekarang saya bisa berada di perusahaan yang baik dan lingkungan yang baik, saya bisa berkeliling dunia, bertemu teman baru dan negara dan budaya yang berbeda, dan mendapatkan pengalaman baru dalam hidup saya.”<br><br>Terima kasih OTC Bali Solo dapat mewujudkan mimpi saya!</blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM LEAD -->
+    <section class="section">
+      <div class="container grid cols-2">
+        <div class="card" style="padding:16px">
+          <h3>Konsultasi Dulu Yuk!</h3>
+          <p>“Fokus kami memberi peluang karier luar negeri kepada Gen-Z yang ingin pendapatan stabil melalui <em>overseas training</em> profesional. Kami akan bantu kamu terjun langsung ke lapangan!”</p>
+          <form class="lead" id="leadForm" novalidate>
+            <div>
+              <label for="nama">Nama Lengkap</label>
+              <input id="nama" name="nama" type="text" placeholder="Nama kamu" required>
+            </div>
+            <div>
+              <label for="wa">No. WhatsApp</label>
+              <input id="wa" name="wa" type="tel" inputmode="numeric" placeholder="08xxxxxxxxxx" required>
+            </div>
+            <div>
+              <label for="kota">Kota/Provinsi</label>
+              <input id="kota" name="kota" type="text" placeholder="Contoh: Solo, Jawa Tengah" required>
+            </div>
+            <button class="btn" type="submit" id="submitLead">Kirim &amp; Konsultasi</button>
+            <p class="help">Setelah terkirim, kamu akan diarahkan ke WhatsApp untuk chat dengan admin kampus.</p>
+            <div class="success" id="successBox" role="status" aria-live="polite">
+              Terima kasih! Form kamu sudah kami terima. Lanjutkan chat via WhatsApp untuk respons cepat.
+              <div style="margin-top:10px">
+                <a class="btn" id="ctaWAFromForm" href="https://wa.me/6287810038905?text=Halo%20OTC%20Bali%20Solo%2C%20saya%20ingin%20konsultasi%20program." target="_blank" rel="noopener">Buka WhatsApp</a>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="card" style="padding:16px">
+          <h3>Tentang & Legal</h3>
+          <p><strong>OTC Bali Solo</strong> adalah lembaga pelatihan pariwisata berfokus karier global. Didukung <strong>PT. Millennium Muda Mandiri</strong> & <strong>PT. Omna Trisatya Chandra</strong> untuk penyaluran luar negeri/kapal pesiar.</p>
+          <p><strong>Alamat Kampus (Solo):</strong><br>Jl. R.M. Said No 208, Mangkubumen Kec. Banjarsari Kota Surakarta Jawa Tengah 57134</p>
+          <div class="grid cols-2">
+            <a class="btn ghost" href="https://maps.app.goo.gl/mbati1DQ9jKXGnGH6" target="_blank" rel="noopener">Lihat di Google Maps</a>
+            <a class="btn secondary" href="#faq">Cek Syarat</a>
+          </div>
+          <div style="margin-top:12px">
+            <iframe class="map" title="Peta Kampus OTC Bali Solo" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.1648606362523!2d110.81311529999999!3d-7.556996299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a1700023c3ff1%3A0xb14b87c4448bdf1a!2sOTC%20Bali%20SOLO!5e0!3m2!1sen!2sid!4v1758610639696!5m2!1sen!2sid"></iframe>
+          </div>
+          <p class="help" style="margin-top:10px">Jam layanan admin (estimasi): Sen–Sab 09.00–17.00 WIB — hubungi WhatsApp untuk konfirmasi.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container">
+        <h3>FAQ — Pertanyaan yang Sering Diajukan</h3>
+        <div class="grid faq cols-2">
+          <details><summary>Apakah OTC Bali Solo berizin?</summary><p>Ya, kami <strong>berizin</strong> dan bekerja sama dengan mitra resmi untuk penyaluran luar negeri & kapal pesiar.</p></details>
+          <details><summary>Minimal pendidikan & usia?</summary><p>Minimal lulusan SMA/SMK/sederajat. Usia mengikuti ketentuan program & mitra penempatan.</p></details>
+          <details><summary>Berapa lama pelatihan?</summary><p>Rata-rata 4–5 bulan intensif sebelum penempatan magang (estimasi, tergantung program).</p></details>
+          <details><summary>Perlu bisa bahasa Inggris/Mandarin?</summary><p>Kami sediakan <strong>kursus Inggris & Mandarin gratis</strong> selama pelatihan.</p></details>
+          <details><summary>Penempatan di negara mana saja?</summary><p>Asia & Eropa sesuai ketersediaan kuota mitra. Kapal pesiar global melalui jalur lanjutan.</p></details>
+          <details><summary>Berapa kisaran gaji?</summary><p>Asia ±Rp5–10 jt/bln, Eropa ±Rp9–15 jt/bln, Cruise ±Rp10–45 jt/bln, J-1 USA ±Rp40–80 jt/bln — <em>semua estimasi</em>.</p></details>
+          <details><summary>Akomodasi & makan bagaimana?</summary><p>Duty meals & asrama umumnya disediakan (sesuai ketentuan mitra & penempatan).</p></details>
+          <details><summary>Bisa cicilan?</summary><p>Bisa, <strong>angsuran hingga 3x</strong> + opsi beasiswa prestasi dan dana talang (S&amp;K berlaku).</p></details>
+          <details><summary>Apa itu Program Intensive Class?</summary><p>Program <strong>fast track 2 bulan</strong> khusus untuk yang sudah punya pengalaman hospitality. Target penempatan kapal pesiar ke Eropa, Brunei, Dubai, Qatar. Biaya <strong>Rp7.500.000</strong> (promo dari Rp10.000.000), free asrama, tapi tidak dapat sertifikat OTC.</p></details>
+          <details><summary>Apakah ada aplikasi belajar?</summary><p>Ada. Pembelajaran berbasis aplikasi; absensi & pembayaran digital.</p></details>
+          <details><summary>Dokumen pendaftaran apa saja?</summary><p>Isi formulir; fotokopi ijazah terakhir; fotokopi KK, KTP & Akta Lahir; pas foto 4×6 (2 lembar).</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="section" id="kebijakan">
+      <div class="container">
+        <h3>Kontak & Sosial</h3>
+        <div class="grid cols-3">
+          <div class="stack">
+            <p><strong>WhatsApp (Solo):</strong> <a href="https://wa.me/6287810038905?text=Halo%20OTC%20Bali%20Solo%2C%20saya%20ingin%20konsultasi%20program." target="_blank" rel="noopener">0878-1003-8905</a></p>
+            <p><strong>Email:</strong> <a href="mailto:otcbalisolo@gmail.com">otcbalisolo@gmail.com</a></p>
+            <p><strong>Website:</strong> <a href="https://www.otcbalisolo.com" target="_blank" rel="noopener">www.otcbalisolo.com</a></p>
+          </div>
+          <div class="stack">
+            <p><strong>Instagram:</strong> <a href="https://instagram.com/otcbali_solo" target="_blank" rel="noopener">@otcbali_solo</a></p>
+            <p><strong>Alamat Kampus:</strong><br>Jl. R.M. Said No 208, Mangkubumen Kec. Banjarsari Kota Surakarta Jawa Tengah 57134</p>
+          </div>
+          <div class="stack">
+            <p><strong>Kebijakan Privasi</strong>: data Anda kami gunakan untuk keperluan konsultasi & pendaftaran. <em>Syarat & ketentuan berlaku.</em></p>
+            <p><a class="btn ghost" href="#daftar">Mulai Daftar</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container footgrid">
+        <div><strong>OTC Bali Solo</strong><br>The Outstanding Tourism College</div>
+        <div><a href="#faq">FAQ</a><br><a href="#kebijakan">Kebijakan Privasi</a></div>
+        <div><a href="https://maps.app.goo.gl/eVbDA6uiCg36XHBH8" target="_blank" rel="noopener">Google Maps</a></div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Floating WhatsApp -->
+  <div class="floating-wa">
+    <a class="btn" id="ctaFloatWA" href="https://wa.me/6287810038905?text=Halo%20OTC%20Bali%20Solo%2C%20saya%20ingin%20konsultasi%20program." aria-label="Konsultasi via WhatsApp" target="_blank" rel="noopener">Chat WA Sekarang</a>
+  </div>
+
+  <!-- JSON-LD FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Apakah OTC Bali Solo berizin?","acceptedAnswer":{"@type":"Answer","text":"Ya, kami berizin dan bekerja sama dengan mitra resmi untuk penyaluran luar negeri & kapal pesiar."}},
+      {"@type":"Question","name":"Minimal pendidikan & usia?","acceptedAnswer":{"@type":"Answer","text":"Minimal lulusan SMA/SMK/sederajat. Usia mengikuti ketentuan program & mitra penempatan."}},
+      {"@type":"Question","name":"Berapa lama pelatihan?","acceptedAnswer":{"@type":"Answer","text":"Rata-rata 4–5 bulan intensif sebelum penempatan magang (estimasi, tergantung program)."}},
+      {"@type":"Question","name":"Perlu bahasa Inggris/Mandarin?","acceptedAnswer":{"@type":"Answer","text":"Kami sediakan kursus Inggris & Mandarin gratis selama pelatihan."}},
+      {"@type":"Question","name":"Penempatan di negara mana saja?","acceptedAnswer":{"@type":"Answer","text":"Asia & Eropa sesuai ketersediaan kuota mitra. Kapal pesiar global melalui jalur lanjutan."}},
+      {"@type":"Question","name":"Berapa kisaran gaji?","acceptedAnswer":{"@type":"Answer","text":"Asia ±Rp5–10 jt/bln, Eropa ±Rp9–15 jt/bln, Cruise ±Rp10–45 jt/bln, J-1 USA ±Rp40–80 jt/bln — semua estimasi."}},
+      {"@type":"Question","name":"Akomodasi & makan bagaimana?","acceptedAnswer":{"@type":"Answer","text":"Duty meals & asrama umumnya disediakan (sesuai ketentuan mitra & penempatan)."}},
+      {"@type":"Question","name":"Bisa cicilan?","acceptedAnswer":{"@type":"Answer","text":"Bisa, angsuran hingga 3x + opsi beasiswa prestasi dan dana talang (S&K berlaku)."}},
+      {"@type":"Question","name":"Apa itu Program Intensive Class?","acceptedAnswer":{"@type":"Answer","text":"Program fast track 2 bulan khusus untuk yang sudah punya pengalaman hospitality. Target penempatan kapal pesiar ke Eropa, Brunei, Dubai, Qatar. Biaya Rp7.500.000 (promo dari Rp10.000.000), free asrama, tapi tidak dapat sertifikat OTC."}},
+      {"@type":"Question","name":"Apakah ada aplikasi belajar?","acceptedAnswer":{"@type":"Answer","text":"Ada. Pembelajaran berbasis aplikasi; absensi & pembayaran digital."}},
+      {"@type":"Question","name":"Dokumen pendaftaran apa saja?","acceptedAnswer":{"@type":"Answer","text":"Isi formulir; fotokopi ijazah terakhir; fotokopi KK, KTP & Akta Lahir; pas foto 4×6 (2 lembar)."}}
+    ]
+  }
+  </script>
+
+  <script>
+    function track(eventName, payload){ /* tracking placeholder */ }
+    function makeWALink(name, city){
+      const base = "https://wa.me/6287810038905";
+      const text = `Halo OTC Bali Solo, saya ${name || 'calon peserta'} dari ${city || '—'}. Saya ingin konsultasi program.`;
+      return `${base}?text=${encodeURIComponent(text)}`;
+    }
+    const form = document.getElementById('leadForm');
+    const successBox = document.getElementById('successBox');
+    const waFromForm = document.getElementById('ctaWAFromForm');
+
+    form?.addEventListener('submit', function(e){
+      e.preventDefault();
+      const nama = document.getElementById('nama').value.trim();
+      const wa = document.getElementById('wa').value.trim();
+      const kota = document.getElementById('kota').value.trim();
+      const agreeEl = document.getElementById('agree');
+      const agree = agreeEl ? agreeEl.checked : true;
+
+      if(!nama || !wa || !kota || !agree){
+        alert('Lengkapi data & setujui kebijakan privasi terlebih dahulu.');
+        return;
+      }
+      if(!/^0\d{8,15}$/.test(wa)){
+        alert('Nomor WhatsApp kurang valid. Gunakan format 08xxxxxxxxxx.');
+        return;
+      }
+      successBox.style.display='block';
+      const link = makeWALink(nama, kota);
+      waFromForm.setAttribute('href', link);
+      track('submit_form',{nama,wa,kota});
+    });
+
+    ['ctaHead','ctaHeroWA','ctaHeroCurriculum','ctaDaftar','ctaFloatWA'].forEach(id=>{
+      const el=document.getElementById(id);
+      if(el) el.addEventListener('click', ()=>track('click_cta',{id}));
+    });
+  </script>
+</body>
+</html>
